@@ -44,6 +44,7 @@ class ModelWrapper:
 
         # hyperparams
         self.use_pred_bw = self.cfg['train_cfg'].get('use_pred_bw', False)
+        self.num_classes = self.cfg['decoder_cfg'].get('num_classes', 6)
 
         # optimizer
         if optimizer:
@@ -148,7 +149,7 @@ class ModelWrapper:
 
         pos = 0
         total = 0
-        for idx, data in enumerate(eval_loader):
+        for _, data in enumerate(eval_loader):
 
             x = data['image']
             label_gt = data['label']
@@ -175,16 +176,12 @@ class ModelWrapper:
     def test_step(self, test_loader):
         
         self.eval()
-        # os.makedirs(os.path.join(self.cfg['train_cfg']['save_path'], "predictions"), exist_ok=True)
-        save_path = os.path.join(self.cfg['train_cfg']['save_path'], "test.txt")
-        pos = 0
-        total = 0
 
-        probs = torch.empty(0, 6).cuda()
+        probs = torch.empty(0, self.num_classes).cuda()
         preds = torch.empty(0, 1).cuda()
         labels_gt = torch.empty(0, 1).cuda()
 
-        for idx, data in enumerate(test_loader):
+        for _, data in enumerate(test_loader):
 
             x = data['image']
             label_gt = data['label']
@@ -203,9 +200,7 @@ class ModelWrapper:
             # ACC
             label_pred = torch.argmax(pred, dim=1).unsqueeze(1)
             preds = torch.cat((preds, label_pred), dim=0)
-
-
-             
+               
         return preds, probs, labels_gt
 
     def train(self):

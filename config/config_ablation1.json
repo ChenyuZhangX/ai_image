@@ -11,6 +11,7 @@
     "decoder_cfg": {
         "d_in": 1024, 
         "d_out": 5, 
+        "num_classes": 5,
         "use_transformer": false,
         "transformer_cfg": {
             "dim": 1, 

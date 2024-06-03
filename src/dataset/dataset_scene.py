@@ -2,7 +2,6 @@ import torch
 import pandas as pd
 from torchvision import transforms
 from PIL import Image, ImageOps
-from einops import rearrange
 import tqdm
 import os
 

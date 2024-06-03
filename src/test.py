@@ -7,6 +7,7 @@ import os
 from model.model_wraper import ModelWrapper
 from model.encoder import Encoder_CNN
 from model.decoder import Decoder_Transformer
+from utils import get_metrics
 from loss import LossCLS
 from dataset.dataset_scene import DataSet_Scene
 import argparse
@@ -40,12 +41,12 @@ def test(cfg):
         preds, probs, gts = model.test_step(test_loader)
 
     # as numpy 
-    probs = probs.cpu().numpy() # bs, 6
+    probs = probs.cpu().numpy() # bs, num_classes
     preds = preds.cpu().numpy().reshape(-1) # bs
     gts = gts.cpu().numpy().reshape(-1)     # bs
 
     # calculate_metrics    
-    metrics(preds, probs, gts, os.path.join(cfg['train_cfg']['save_path'], "metrics"))
+    get_metrics(preds, probs, gts, os.path.join(cfg['train_cfg']['save_path'], "metrics"))
 
     print("Testing complete!")
 
