@@ -4,6 +4,13 @@
 ### All the codes are in the `src` folder, and are implemented by Chenyu Zhang. And this project is based on one of my research project's code, which is also implemented by Chenyu Zhang own.
 
 
+## Get the Code
+
+```bash
+https://github.com/ChenyuZhangX/ai_image.git
+```
+
+
 ## Requirements
 
 Run 
