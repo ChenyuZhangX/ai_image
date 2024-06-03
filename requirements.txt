@@ -1,5 +1,8 @@
 pytorch
 torchvision
+tqdm
+pandas
+einops
 
 
 # clip
