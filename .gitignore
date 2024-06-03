@@ -3,3 +3,4 @@ debug
 datasets
 CLIP
 src/debug
+debug.sh
