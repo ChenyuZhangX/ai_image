@@ -1,0 +1,9 @@
+pytorch
+torchvision
+
+
+# clip
+ftfy 
+regex 
+tqdm
+openai-clip
