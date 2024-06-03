@@ -17,7 +17,11 @@ bash train_xxx.sh # remember to change the config and path
 bash test_xxx.sh
 ```
 
-## 1. Main Results
+## Pipeline
+
+![Pipeline](./imgs/pipeline.pdf)
+
+## 2. Main Results
 
 |Metric| Accuracy | F1 | Precision | Recall |
 |---|---|---|---|---|
@@ -25,7 +29,7 @@ bash test_xxx.sh
 |Simple Model| $0.7839$ | $0.7826$ | $0.7971$ | $0.7879$ |
 |CLIP Model | $0.3698$ | $0.3454$ | $0.3203$ | $0.3784$ |
 
-### 1.1. Transformer Decoder + Adam + Bigger Feature
+### 2.1. Transformer Decoder + Adam + Bigger Feature
 
 See ``config/config_transformer.json`` for the configuration.
 
@@ -35,7 +39,7 @@ See ``config/config_transformer.json`` for the configuration.
 
 
 
-### 1.2. FC Decoder + Adamx + Smaller Feature
+### 2.2. FC Decoder + Adamx + Smaller Feature
 
 See ``config/config_fc.json`` for the configuration.
 
@@ -44,7 +48,7 @@ See ``config/config_fc.json`` for the configuration.
   ![confusion_matrix](./imgs/exp_fc/confusion_matrix.png)
 
 
-### 1.3. CLIP Model
+### 2.3. CLIP Model
 
 **For the results please check the [visual.ipynb](./visual.ipynb) for visualization results and clip model outputs.**
 
@@ -53,7 +57,7 @@ See ``config/config_fc.json`` for the configuration.
 
   ![confusion_matrix](./imgs/clip/confusion_matrix.png)
 
-## 2. Ablation for Full Model
+## 3. Ablation for Full Model
 
 Drop one class to see the affects on the model's performance.
 
@@ -71,6 +75,12 @@ Drop one class to see the affects on the model's performance.
 And after seeing the result of the photo below, we can get some intuition for explaining the results. These photos' predicted labels are predicted by clip model.
 
 ![](./imgs/clip/confusing.png)
+
+And by looking at the confusion matrix, we get the same results:
+
+*4(sea) and 5(streetscape), 2(glacier) and 3(moutain) are confused pair and the model tends to predict 5(streetscape) as 0(buildings)*
+
+These results are probably due to the balance of training set and that the streetscape indeed contains many buildings.
 
 This inspires us that the key of model's performance is whether the samples of one class is confused with another and the ratio of the samples of each class.
 
