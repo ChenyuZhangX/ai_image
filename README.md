@@ -24,6 +24,7 @@ bash test_xxx.sh # remember to change the config
 |---|---|---|---|---|
 |Full Model|$\bf 0.8580 \uparrow$|$\bf 0.8572 \uparrow$|$\bf 0.8612  \uparrow $|$\bf 0.8618  \uparrow$|
 |Simple Model| $0.7839$ | $0.7826$ | $0.7971$ | $0.7879$ |
+|CLIP Model | $0.3698$ | $0.3454$ | $0.3203$ | $0.3784$ |
 
 ### Transformer Decoder + Adam + Bigger Feature
 
@@ -41,9 +42,12 @@ bash test_xxx.sh # remember to change the config
 
   ![confusion_matrix](./imgs/exp_fc/confusion_matrix.png)
 
-## Test of CLIP Model and Visualization
-
-For the results please check the [visual.ipynb](./visual.ipynb) for visualization results and clip model outputs.
 
 ### CLIP Model
 
+**For the results please check the [visual.ipynb](./visual.ipynb) for visualization results and clip model outputs.**
+
+
+- Confusion Matrix
+
+  ![confusion_matrix](./imgs/clip/confusion_matrix.png)
