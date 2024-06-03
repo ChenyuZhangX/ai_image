@@ -19,7 +19,7 @@ bash test_xxx.sh
 
 ## Pipeline
 
-![Pipeline](./imgs/pipeline.pdf)
+![Pipeline](./imgs/pipeline.png)
 
 ## 2. Main Results
 
