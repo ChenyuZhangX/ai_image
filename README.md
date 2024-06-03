@@ -18,7 +18,7 @@ bash test_xxx.sh # remember to change the config
 ```
 
 
-## Results
+## 1. Main Results
 
 |Metric| Accuracy | F1 | Precision | Recall |
 |---|---|---|---|---|
@@ -26,7 +26,7 @@ bash test_xxx.sh # remember to change the config
 |Simple Model| $0.7839$ | $0.7826$ | $0.7971$ | $0.7879$ |
 |CLIP Model | $0.3698$ | $0.3454$ | $0.3203$ | $0.3784$ |
 
-### Transformer Decoder + Adam + Bigger Feature
+### 1.1. Transformer Decoder + Adam + Bigger Feature
 
 - Confusion Matrix
 
@@ -36,14 +36,14 @@ bash test_xxx.sh # remember to change the config
 
 
 
-### FC Decoder + Adamx + Smaller Feature
+### 1.2. FC Decoder + Adamx + Smaller Feature
 
 - Confusion Matrix
 
   ![confusion_matrix](./imgs/exp_fc/confusion_matrix.png)
 
 
-### CLIP Model
+### 1.3. CLIP Model
 
 **For the results please check the [visual.ipynb](./visual.ipynb) for visualization results and clip model outputs.**
 
@@ -51,3 +51,7 @@ bash test_xxx.sh # remember to change the config
 - Confusion Matrix
 
   ![confusion_matrix](./imgs/clip/confusion_matrix.png)
+
+## 2. Ablation for Full Model
+
+Use 
