@@ -13,10 +13,9 @@ to install the required packages.
 ## Run
 
 ```bash
-bash train_xxx.sh # remember to change the config
-bash test_xxx.sh # remember to change the config
+bash train_xxx.sh # remember to change the config and path
+bash test_xxx.sh
 ```
-
 
 ## 1. Main Results
 
@@ -67,6 +66,13 @@ Drop one class to see the affects on the model's performance.
 |3(mountains)   | $0.8998 \uparrow$ | $0.8996 \uparrow$ | $0.9004 \uparrow$ | $0.9005 \uparrow$ |
 |4(sea)         | $0.8751 \uparrow$ | $0.8749 \uparrow$ | $0.8775 \uparrow$ | $0.8760 \uparrow$ |
 |5(streetscape) | $0.8872 \uparrow$ | $0.8872 \uparrow$ | $0.8912 \uparrow$ | $0.8918 \uparrow$ |
+
+
+And after seeing the result of the photo below, we can get some intuition for explaining the results. These photos' predicted labels are predicted by clip model.
+
+![](./imgs/clip/confusing.png)
+
+This inspires us that the key of model's performance is whether the samples of one class is confused with another and the ratio of the samples of each class.
 
 - The reason for this performance might be that 0 is always assumed when the model judges a street scenes or somewhat, that makes the buildings' accuracy high, and remove buildings will make the total performance drop. 
 
