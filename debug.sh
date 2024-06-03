@@ -1,1 +1,0 @@
-python src/debug.py -i 0
