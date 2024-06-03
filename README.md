@@ -1,7 +1,5 @@
 # AI Image Classifiers
 
-
-
 ## Requirements
 
 Run 
@@ -46,3 +44,6 @@ bash test_xxx.sh # remember to change the config
 ## Test of CLIP Model and Visualization
 
 For the results please check the [visual.ipynb](./visual.ipynb) for visualization results and clip model outputs.
+
+### CLIP Model
+
