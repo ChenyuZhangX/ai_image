@@ -1,0 +1,29 @@
+{
+    "train_cfg": {
+        "data_path": "/data/zhangchenyu/ai_image", 
+        "batch_size": 350, 
+        "save_path": "./outputs/exp2", 
+        "num_epochs": 5001
+    }, 
+    "encoder_cfg": {
+        "d_latent": 1024
+    }, 
+    "decoder_cfg": {
+        "d_in": 1024, 
+        "d_out": 6, 
+        "use_transformer": false,
+        "transformer_cfg": {
+            "dim": 1, 
+            "depth": 3, 
+            "heads": 20, 
+            "dim_head": 20, 
+            "mlp_dim": 128
+        }
+    }, 
+        "optimizer_cfg": {
+            "lr": 0.001
+    }, 
+        "loss_cfg": {
+            "lam_cls": 1.0
+    }
+}

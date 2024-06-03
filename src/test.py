@@ -79,11 +79,6 @@ def test(cfg):
 
     print("Testing complete!")
 
-
-
-    
-
-
 if __name__ == "__main__":
     args = arg_parser()
     with open(args.config, 'rb') as f:

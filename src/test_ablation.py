@@ -19,11 +19,12 @@ def arg_parser():
     parser.add_argument('--config', type=str, default='./outputs/exp1/config.pkl', help='Path to the config file')
     parser.add_argument('--ckpt', type=str, default='./outputs/exp1/ckpt.pth', help='Path to the checkpoint file')
     parser.add_argument('--batch_size', type=int, default=350, help='Batch size for training')
+    parser.add_argument('--to_drop', type=int, default=5, help='Label to drop')
     args = parser.parse_args()
     return args
 
 def test(cfg):
-    test_loader = DataLoader(DataSet_Scene(cfg['train_cfg']['data_path'], device = 'cpu', mode = 'test'), batch_size=100, shuffle=False)
+    test_loader = DataLoader(DataSet_Scene(cfg['train_cfg']['data_path'], device = 'cpu', mode = 'test', ablation1 = True, to_drop = cfg['to_drop']), batch_size=100, shuffle=False)
     encoder = Encoder_CNN(cfg['encoder_cfg'])
     decoder = Decoder_Transformer(cfg['decoder_cfg'])
     losses = [
@@ -92,6 +93,7 @@ if __name__ == "__main__":
     cfg['test_cfg'] = {
         'ckpt': args.ckpt
     }
+    cfg['to_drop'] = args.to_drop
     test(cfg)
 
 
