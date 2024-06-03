@@ -1,6 +1,8 @@
+**/__pycache__/
 outputs
 debug
 datasets
 CLIP
 src/debug
 debug.sh
+gitcmd.md
