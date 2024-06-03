@@ -24,8 +24,8 @@ bash test_xxx.sh # remember to change the config
 
 |Metric| Accuracy | F1 | Precision | Recall |
 |---|---|---|---|---|
-|Full Model|0.8180|0.8172|0.8212|0.8218|
-|Simple Model| 0.7839 | 0.7826 | 0.7971 | 0.7879 |
+|Full Model|$\bf 0.8580 \uparrow$|$\bf 0.8572 \uparrow$|$\bf 0.8612  \uparrow $|$\bf 0.8618  \uparrow$|
+|Simple Model| $0.7839$ | $0.7826$ | $0.7971$ | $0.7879$ |
 
 ### Transformer Decoder + Adam + Bigger Feature
 
