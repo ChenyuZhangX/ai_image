@@ -6,3 +6,4 @@ CLIP
 src/debug
 debug.sh
 gitcmd.md
+run_clip.py
