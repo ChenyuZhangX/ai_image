@@ -1,5 +1,9 @@
 # AI Image Classifiers
 
+
+### All the codes are in the `src` folder, and are implemented by Chenyu Zhang. And this project is based on one of my research project's code, which is also implemented by Chenyu Zhang own.
+
+
 ## Requirements
 
 Run 
@@ -13,11 +17,29 @@ to install the required packages.
 ## Run
 
 ```bash
-bash train_xxx.sh # remember to change the config and path
-bash test_xxx.sh
+bash train_<experiment type>.sh # remember to change the config and path
+bash test_<experiment type>.sh
 ```
 
-## Pipeline
+## Code comment
+
+### Data
+
+- **Dataset** is implemented in ``src/dataset/dataset_scene.py``
+
+### Model
+
+- **Encoder** and **Decoder** are implemented in ``src/model/encoder.py or decoder.py``
+
+- **Model** is wraped by ``src/model/model_wrapper.py``
+
+### Train and Test
+
+- **Train** and **Test** are implemented in ``src/train_<experiment type>.py`` and ``src/test_<experiment type>.py``
+
+
+
+## 1.Pipeline
 
 ![Pipeline](./imgs/pipeline.png)
 
