@@ -126,3 +126,10 @@ This inspires us that the key of model's performance is whether the samples of o
 - And the reason for "streetscape" is that the model might always see the streetscape as the other classes like "buildings" or "sea", and remove streetscape will make the total performance increase.
 
 - Also, the performance's increase or decrease level are similar, which can indicate that the samples of each class are approximately balanced.
+
+
+## 4. Train Process
+
+- **Loss Curve**
+
+  ![loss_curve](./imgs/loss_acc.png)
