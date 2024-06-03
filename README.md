@@ -29,6 +29,8 @@ bash test_xxx.sh
 |Simple Model| $0.7839$ | $0.7826$ | $0.7971$ | $0.7879$ |
 |CLIP Model | $0.3698$ | $0.3454$ | $0.3203$ | $0.3784$ |
 
+- The bad performance of CLIP model mainly due to the test samples are too confusing in semantic, such as streetscape contains buildings, glaciers are very similar to moutains that human can hardly distinguish.
+
 ### 2.1. Transformer Decoder + Adam + Bigger Feature
 
 See ``config/config_transformer.json`` for the configuration.
