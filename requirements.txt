@@ -5,7 +5,7 @@ pandas
 einops
 
 
-# clip
+# if you want to use clip, run the following
 ftfy 
 regex 
 tqdm
